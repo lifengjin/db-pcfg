@@ -15,30 +15,7 @@ NUMPY_INC=$(shell python3 -c 'import numpy; print(numpy.get_include())')
 PY3_LOC=env/bin/${PYTHON_VERSION}
 VPATH := genmodel data
 
-  
-#################################
-#
-# COLING 2016 Repro
-#
-#################################
 
-# The first target trains with punctuation,
-# the second trains without. These can be run
-# in parallel with make -j, but keep in mind that
-# the system is already parallelized and each
-# of the two targets below will consume 10 parallel
-# processes.
-#
-coling2016: projects/eve/a4-b4-g8-d2-fin/eve.nt.lower.nounary.nolabel.uhhmm \
-            projects/eve/a4-b4-g8-d2-fin/eve.induc.uhhmm
-            
-# If running on a system with a GPU, use
-# this target for a big speed increase
-coling2016-GPU: projects/eve/a4-b4-g8-d2-P-fin/eve.nt.lower.nounary.nolabel.uhhmm \
-            projects/eve/a4-b4-g8-d2-P-fin/eve.induc.uhhmm
-
-            
-            
 #################################
 #
 # Includes to external resources
