@@ -65,3 +65,21 @@ doing a chain.
   to run on a super computer or a cluster. In this case, the master process will write out a 
   `masterConfig.txt` file into the root directory of the package, and you can start arbitrary 
   number of workers by doing `python scripts/workers.py .`.  
+
+## Run the system
+Now the hard work is over, and the system is runnable. By running the system, you should just do 
+`python scripts/uhhmm-trainer.py config/config.file`. This launches the master process. The outputs 
+will be written into the specified output directory. If you have specified number of GPU workers 
+in the config file, then the system will start running now. If you have 0 specified GPU workers, 
+please follow Note 3 to start some GPU workers for sampling.
+
+Because most of the runs take longer than a couple of days, you may want to continue a stopped 
+run. In order to do that, you just pass in the output directory instead of the config file to the
+ trainer: `python scripts/uhhmm-trainer.py outputs/output_dir` and the master process will be 
+ started and pick up where it is stopped at. For the workers it is the same as starting a new run.
+ 
+The important output files written to the output directory include a `pcfg_hypparams.txt` which 
+records log-likelihoods and right-branching tendency scores at every iteration. The linetrees 
+files are the sampled trees for the training corpus in the brackets format at every iteration. 
+They are ready for normal unlabeled bracketing evaluation when punctuation is removed from these 
+trees.
