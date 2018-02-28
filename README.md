@@ -1,10 +1,12 @@
-#DB PCFG
+#Depth-Bounded PCFG Induction
 
 *UNDER CONSTRUCTION*
 
 ## Introduction
-This is the repo for the paper [Unsupervised Grammar Induction with Depth-bounded PCFG](https://arxiv.org/abs/1802.08545) that will appear in Transcations of Association for 
-Computational Linguistics.
+This is the repo for the paper [Unsupervised Grammar Induction with Depth-bounded PCFG](https://arxiv.org/abs/1802.08545) 
+that appears in Transcations of Association for 
+Computational Linguistics. A large part of the code is based on another system called [UHHMM](https://github.com/tmills/uhhmm)
+so some scripts may still have older names.
 
 Dependencies include:
 
