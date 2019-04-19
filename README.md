@@ -1,7 +1,5 @@
 # Depth-Bounded PCFG Induction
 
-*UNDER CONSTRUCTION*
-
 ## Introduction
 This is the repo for the paper [Unsupervised Grammar Induction with Depth-bounded PCFG](https://arxiv.org/abs/1802.08545) 
 that appears in Transcations of Association for 
